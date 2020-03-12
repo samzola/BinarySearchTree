@@ -5,14 +5,17 @@ using namespace std;
 class Tree {
   int *array;
   int size;
+  int root;
+  int capacity;
  public:
-  Tree();
+  Tree(int);
   ~Tree();
   void insert(int);
   void swap(int*, int*);
-  int search(int);
+  void search(int);
   void order(int);
   void print();
-  void remove(int); 
+  void remove(int);
+  bool inTree(int);
  private:
 };
