@@ -3,19 +3,25 @@
 using namespace std;
 
 class Tree {
-  int *array;
+  struct Node {
+    Node* parent;
+    Node* left;
+    Node* right;
+    int data;
+  };
   int size;
-  int root;
-  int capacity;
+  Node* root;
  public:
-  Tree(int);
+  Tree();
   ~Tree();
   void insert(int);
   void swap(int*, int*);
-  void search(int);
+  void search(Node*, int);
   void order(int);
   void print();
   void remove(int);
   bool inTree(int);
+
+  void preSearch(int);
  private:
 };

@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-  Tree t(100);
+  Tree t = Tree();
   bool running = true;
   char* input = new char[15];
   char* conOrFile = new char[15];
@@ -57,10 +57,10 @@ int main() {
       cin.getline(delNum, 100, '\n');
       char *Dtok = strtok(delNum, " ");
       int deleter = atoi(Dtok);
-      t.remove(deleter);
+      //t.remove(deleter);
     }
     else if (strcmp(input, "print") == 0) {
-      t.print();
+      //t.print();
     }
     else if (strcmp(input, "search") == 0) {
       cout << "Please enter the number you would like to search for." << endl;
@@ -68,7 +68,7 @@ int main() {
       cin.getline(searchNum, 100, '\n');
       char *tok = strtok(searchNum, " ");
       int searcher = atoi(tok);
-      t.search(searcher);
+      t.preSearch(searcher);
     }
     else if (strcmp(input, "quit") == 0) {
       running = false;
