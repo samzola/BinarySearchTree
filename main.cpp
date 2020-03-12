@@ -57,10 +57,10 @@ int main() {
       cin.getline(delNum, 100, '\n');
       char *Dtok = strtok(delNum, " ");
       int deleter = atoi(Dtok);
-      //t.remove(deleter);
+      t.remove(deleter);
     }
     else if (strcmp(input, "print") == 0) {
-      //t.print();
+      t.prePrint();
     }
     else if (strcmp(input, "search") == 0) {
       cout << "Please enter the number you would like to search for." << endl;

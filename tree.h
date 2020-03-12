@@ -18,10 +18,11 @@ class Tree {
   void swap(int*, int*);
   void search(Node*, int);
   void order(int);
-  void print();
+  void print(Node*, int);
   void remove(int);
-  bool inTree(int);
-
+  Node* inTree(Node*, int);
+  void move(Node*);
   void preSearch(int);
+  void prePrint();
  private:
 };
